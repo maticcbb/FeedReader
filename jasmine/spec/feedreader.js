@@ -21,12 +21,13 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-           var feedCheck ;
+           var feedCheck,
+               menuTest; 
 
          beforeEach(function() 
          {
            feedCheck = new FeedsCheck();
-
+           menuTest = new MenuCheck();
          });
 
         it('are defined', function() {
@@ -54,7 +55,7 @@ $(function() {
          */
     });
 
-
+        
     /* TODO: Write a new test suite named "The menu" */
 
         /* TODO: Write a test that ensures the menu element is
@@ -62,12 +63,39 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+
+          describe('The menu', function () {
+
+              var menuTest;
+
+              beforeEach(function () {
+
+                  menuTest = new MenuCheck();
+              });
+
+              it('menu is hidden by default', function () {
+                  menuTest.menuVisibility();
+                  expect(menuTest.menu_checked).toBe(true);
+
+              })
+
+              it('menu toggle is working properly' , function () {
+                 
+                  menuTest.menuHide();
+                  expect(menuTest.hidden_checked).toBe(true);
+                  
+                  menuTest.menuShow();
+                  expect(menuTest.visible_checked).toBe(true);
+              })
+
+          })
 
     /* TODO: Write a new test suite named "Initial Entries" */
 

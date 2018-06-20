@@ -1,4 +1,4 @@
-function FeedsCheck() {
+/* function FeedsCheck() {
 this.table = [];
 }
 
@@ -30,6 +30,20 @@ var allFeeds = [{
     name: 'Linear Digressions',
     url: 'http://feeds.feedburner.com/udacity-linear-digressions'
 }];
+ */
+
+//feedCheck.urlDefined();
+
+function MenuCheck() {
+    this.menu_element = document.getElementsByTagName("body")[0];
+    this.menu_checked = false;
 
 
-feedCheck.urlDefined();
+}
+
+MenuCheck.prototype.menuVisibility = function () {
+    console.log(this.menu_element.className);
+}
+
+var m1 = new MenuCheck();
+m1.menuVisibility();
