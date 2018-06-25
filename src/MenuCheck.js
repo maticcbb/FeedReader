@@ -1,16 +1,11 @@
 function MenuCheck() {
-    this.menu_element = document.getElementsByTagName('body')[0];
-    this.menu_checked = false;
-    this.toggle = function () {
+    this.menu_element = document.getElementsByTagName('body')[0]; //gets body element
+    this.menu_checked = false; //checking variable
+    this.toggle = function () {     // methode that toggle the menu button
         $('body').toggleClass('menu-hidden');
     };
     
 }
 
-MenuCheck.prototype.menuVisibility = function () {
-    if (this.menu_element.className == 'menu-hidden') {
-        this.menu_checked = true;
-    }
-}
 
 
