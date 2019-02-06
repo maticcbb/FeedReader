@@ -6,7 +6,7 @@ This is a project for Udacity Front-End Web Developer Nanodegree Schoolarship an
 ## How to run application
 
 
-Clone or download the project and run index.html or click on link:https://maticcbb.github.io/Udacity--FeedReader/.
+Clone or download the project and run index.html or click on link:https://maticcbb.github.io/Feed Reader/.
 
 When the page loads, Jasmine also loads and runs the tests. At the end of the page you should see the list of the tests executed and their status: passed (marked with a green dot) or failed (marked with a red X)
 
